@@ -1,0 +1,7 @@
+1. Install SSH
+
+2. Install VSFTPD
+  sudo spt-get install vsftpd
+
+3. Install postgresql
+  sudo apt-get install postgresql postgresql-contrib -y
