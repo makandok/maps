@@ -3,5 +3,66 @@
 2. Install VSFTPD
   sudo spt-get install vsftpd
 
-3. Install postgresql
+3. Install postgresql 9.3 currently latest version on ubuntu
   sudo apt-get install postgresql postgresql-contrib -y
+ 
+//http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
+a. Install 9.4, use the following
+  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
+  or 
+  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt utopic-pgdg main" >> /etc/apt/sources.list'
+  
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+
+sudo apt-get update
+
+Installs Postgresql9.4, postgis 2.1
+sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib
+
+pgadmin3
+
+b. Install pgRouting
+http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
+http://workshop.pgrouting.org/chapters/installation.html
+
+
+sudo apt-add-repository -y ppa:georepublic/pgrouting
+or for 14.10
+sudo apt-add-repository -y ppa:georepublic/pgrouting-unstable
+
+
+sudo apt-get update
+# Install pgRouting package (for Ubuntu 14.04)
+sudo apt-get install postgresql-9.4-pgrouting
+
+  
+4. set password for user postgres
+ sudo passwd postgres
+ 
+ or sudo adduser username
+ and follow prompts
+ 
+ edit pg_hba.conf to allow trust for postgres
+ sudo nano /etc/postgresql/9.4/pg_hba.conf
+ change line 
+ local	all	postgres	peer
+ to 
+ local	all	postgres	trust
+ 
+ restart server
+ sudo service postgresql restart
+ 
+ log in to psl and change password for user postgres
+ psql -Upostgres
+ >>alter user postgres with password 'password'
+ >>\q
+ 
+ edit pg_hba.conf file and change the line
+  local	all	postgres	trust
+  to
+   local	all	postgres	md5
+  
+ 5. COnfigure PostGIS
+
+
+ 
