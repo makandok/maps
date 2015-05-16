@@ -54,7 +54,7 @@ sudo apt-get install postgresql-9.4-pgrouting
  
  log in to psl and change password for user postgres
  psql -Upostgres
- >>alter user postgres with password 'password'
+ >>alter user postgres with password 'password';
  >>\q
  
  edit pg_hba.conf file and change the line
@@ -62,7 +62,86 @@ sudo apt-get install postgresql-9.4-pgrouting
   to
    local	all	postgres	md5
   
- 5. COnfigure PostGIS
+ 5. Configure PostGIS
+ http://postgis.net/install/
+ 
+ --note: extensions are stored under /usr/share/postgresql/9.4/extension
+ psql -Upostgres
+ >> create database mapdata;
+ >> \c mapdata
+ >> create extension postgis;
+ >> create extension postgis_topology;
+ >> create extension fuzzystrmatch;
+ -->> create extension postgis_tiger_geocoder
+ 
+ 
+6. Install Apache or LAMP
+sudo tasksel
+then pick LAMP Server
+or simply do
+sudo apt-get install lamp-server^
 
+
+add index.php to begining of dir.conf
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu
+sudo nano /etc/apache2/mods-enabled/dir.conf
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html index.cgi index.pl index.php index.xhtml index.htm
+</IfModule>
+
+we secure mysql
+sudo mysql_install_db
+sudo mysql_secure_installation
 
  
+ Fix issue of Fully qualified domain name in apache2
+ https://help.ubuntu.com/community/ApacheMySQLPHP
+ 
+ //run these 2 or try the others below this
+ sudo echo "ServerName localhost" >> /etc/apache2/conf-available/fqdn.conf
+
+ or 
+ echo "ServerName localhost" >> fqdn.conf
+ sudo cp fqdn.conf /etc/apache2/conf-available/
+
+ //we enable the conf
+ sudo a2enconf fqdn.conf
+ 
+ sudo service apache2 reload
+ or
+ sudo service apache2 restart
+ 
+ 7. If you need php admin tool, eg adminer
+ http://www.adminer.org/#download
+ 
+ 
+ wget http://liquidtelecom.dl.sourceforge.net/project/adminer/Adminer/Adminer%204.2.1/adminer-4.2.1-en.php
+ sudo cp adminer-4.2.1-en.php /var/www/html/adminer.php
+ 
+ 8. Install 7zip 
+ sudo apt-get install p7zip p7zip-full
+ 
+ 9. install leaflet library for leaflet maps
+ http://leafletjs.com/download.html
+ 
+ wget http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip
+ 
+ 7z x leaflet-0.7.3.zip -o /var/www/html/leaflet-0.7.3/ 
+ 
+ use a simple example e.g. 
+ http://leafletjs.com/examples/quick-start-example.html
+ 
+ 
+ 10. Mapnik
+ 
+ 
+ 
+ 11. Mapnik Configurations
+ 
+ 
+ 
+ 12. TileStache / TileMill /TileStash / TileLite
+ 
+ 13. Simple map using this server in a similar fashion as osm, mapbox etc
+ 
+ 14. Custom UI on top of map
