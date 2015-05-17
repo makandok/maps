@@ -131,9 +131,13 @@ sudo mysql_secure_installation
  use a simple example e.g. 
  http://leafletjs.com/examples/quick-start-example.html
  
+ 10.a Install spatialite and sqlite3
+ sudo apt-get install sqlite3 spatialite-bin gdal-bin python-gdal python-sqlite
  
- 10. Mapnik
+ #sudo apt-get install r-base rstudio r-cran-gdata r-cran-gregmisc 
  
+ 10b. Mapnik
+ sudo apt-get install libmapnik2.2 libmapnik2-dev mapnik-utils python-mapnik2 tilelite
  
  
  11. Mapnik Configurations
@@ -145,3 +149,6 @@ sudo mysql_secure_installation
  13. Simple map using this server in a similar fashion as osm, mapbox etc
  
  14. Custom UI on top of map
+ 
+ 15. gdal
+ sudo apt-get install gdal-bin python-gdal
