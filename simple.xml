@@ -60,11 +60,85 @@
     <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
   </Rule>
 </Style>
+<Style name="district-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#918e4d" stroke-width="1" />
+  </Rule>
+</Style>
 <Layer name="district"
   srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>district-outline</StyleName>
     <StyleName>district</StyleName>
     <Datasource>
        <Parameter name="file"><![CDATA[C:\GisBrowser\DistrictSoko.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="rivers" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="0.2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="rivers"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>rivers</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\rivers_from_rawshapefile.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="minorroad" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="minorroad-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="minorroad"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>minorroad-outline</StyleName>
+    <StyleName>minorroad</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\minor_roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="majorroads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="majorroads-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="4" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="majorroads"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>majorroads-outline</StyleName>
+    <StyleName>majorroads</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\major_roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="villages" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="3" fill="#4d4d4d" allow-overlap="true" opacity="75" />
+  </Rule>
+</Style>
+<Layer name="villages"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>villages</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\villages.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -79,6 +153,71 @@
     <StyleName>facility</StyleName>
     <Datasource>
        <Parameter name="file"><![CDATA[C:\GisBrowser\LusakaHFs.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="mainrivers" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="mainrivers"
+  srs="+proj=longlat +ellps=clrk66 +no_defs">
+    <StyleName>mainrivers</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\rivers_strahler_order_4_to_6.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="towns" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="5" fill="#ffffff" allow-overlap="true" />
+  </Rule>
+</Style>
+<Style name="towns-outline" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="14" fill="#000000" allow-overlap="true" />
+    <TextSymbolizer face-name="Arial Regular" fill="#ffffff" size="10" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="towns"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>towns-outline</StyleName>
+    <StyleName>towns</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\towns.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lakes" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="1" fill="#42b4ff" />
+  </Rule>
+</Style>
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>lakes</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\lakes.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="nationalparks" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="90" fill="#538e2d" />
+  </Rule>
+</Style>
+<Layer name="nationalparks"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>nationalparks</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\parks.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
