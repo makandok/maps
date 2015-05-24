@@ -156,7 +156,17 @@ sudo mysql_secure_installation
  cd mapdata
  
  use mapnik configuration file given here
- maps/simple.xml
+ Download and use TileMill to create mapnik xml files 
+ #  maps/simple.xml
+ 
+ 
+ mkdir /usr/share/webmaps
+ cp zambia_shapefiles.7z /usr/share/webmaps
+ cd /usr/share/webmaps
+ 7z x zambia_shapefiles.7z
+ chown myacct /usr/share/webmaps/zambia_shapefiles
+ cd /usr/share/webmaps/zambia_shapefiles
+ 
  
  wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
  

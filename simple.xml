@@ -12,7 +12,6 @@
   <Parameter name="description"><![CDATA[Infrastructure in Lusaka Province]]></Parameter>
 </Parameters>
 
-
 <Style name="national-fill" filter-mode="first" >
   <Rule>
     <LineSymbolizer stroke="#a86933" stroke-width="4" stroke-linejoin="round" />
@@ -29,7 +28,7 @@
     <StyleName>national-outline</StyleName>
     <StyleName>national-fill</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\ZambiaNationalSoko.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\zambia.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -50,7 +49,7 @@
     <StyleName>province-outline</StyleName>
     <StyleName>province</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\ProvincesSoko.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\provinces.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -70,7 +69,7 @@
     <StyleName>district-outline</StyleName>
     <StyleName>district</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\DistrictSoko.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\districts.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -84,7 +83,7 @@
   srs="+proj=longlat +ellps=WGS84 +no_defs">
     <StyleName>rivers</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\rivers_from_rawshapefile.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\all_rivers_raw.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -104,7 +103,7 @@
     <StyleName>minorroad-outline</StyleName>
     <StyleName>minorroad</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\minor_roads.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\minor_roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -124,7 +123,7 @@
     <StyleName>majorroads-outline</StyleName>
     <StyleName>majorroads</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\wip\major_roads.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\major_roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -138,7 +137,7 @@
   srs="+proj=longlat +ellps=WGS84 +no_defs">
     <StyleName>villages</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\villages.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\villages.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -152,7 +151,7 @@
   srs="+proj=longlat +ellps=WGS84 +no_defs">
     <StyleName>facility</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\LusakaHFs.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\health_facilities_lsk.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -166,7 +165,7 @@
   srs="+proj=longlat +ellps=clrk66 +no_defs">
     <StyleName>mainrivers</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\rivers_strahler_order_4_to_6.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\main_rivers.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -187,7 +186,7 @@
     <StyleName>towns-outline</StyleName>
     <StyleName>towns</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\towns.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\towns.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -202,7 +201,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>lakes</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\lakes.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\lakes.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -217,9 +216,8 @@
   srs="+proj=longlat +ellps=WGS84 +no_defs">
     <StyleName>nationalparks</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[C:\GisBrowser\msc\parks.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\Upload\parks.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
-
 </Map>
