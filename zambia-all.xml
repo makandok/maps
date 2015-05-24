@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#b8dee6" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">21.7529,-18.271,33.9697,-7.8416</Parameter>
+  <Parameter name="center">28.3008,-13.2934,7</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">7</Parameter>
+  <Parameter name="maxzoom">14</Parameter>
+  <Parameter name="name"><![CDATA[zambia-all]]></Parameter>
+  <Parameter name="description"><![CDATA[major infrastructure in Zambia]]></Parameter>
+</Parameters>
+
+
+<Style name="national-fill" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="4" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#e3dedb" />
+  </Rule>
+</Style>
+<Style name="national-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#501616" stroke-width="5" />
+  </Rule>
+</Style>
+<Layer name="national"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>national-outline</StyleName>
+    <StyleName>national-fill</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\zambia.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="province" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
+    <TextSymbolizer face-name="Arial Regular" fill="#003366" size="20" ><![CDATA[[NAME1_]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="province-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#501616" stroke-width="2" />
+  </Rule>
+</Style>
+<Layer name="province"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>province-outline</StyleName>
+    <StyleName>province</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\provinces.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="district" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Style name="district-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#918e4d" stroke-width="1" />
+  </Rule>
+</Style>
+<Layer name="district"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>district-outline</StyleName>
+    <StyleName>district</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\districts.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="rivers" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="0.2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="rivers"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>rivers</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\all_rivers_raw.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="minorroad" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="minorroad-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="minorroad"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>minorroad-outline</StyleName>
+    <StyleName>minorroad</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\minor_roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="majorroads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="majorroads-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="4" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="majorroads"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>majorroads-outline</StyleName>
+    <StyleName>majorroads</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\major_roads.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="villages" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="3" fill="#4d4d4d" allow-overlap="true" opacity="75" />
+  </Rule>
+</Style>
+<Layer name="villages"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>villages</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\villages.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="facility" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="6" fill="#ff4455" stroke="#881133" allow-overlap="true" />
+  </Rule>
+</Style>
+<Layer name="facility"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>facility</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\health_facilities_lsk.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="mainrivers" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="mainrivers"
+  srs="+proj=longlat +ellps=clrk66 +no_defs">
+    <StyleName>mainrivers</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\main_rivers.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="towns" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="5" fill="#ffffff" allow-overlap="true" />
+  </Rule>
+</Style>
+<Style name="towns-outline" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="14" fill="#000000" allow-overlap="true" />
+    <TextSymbolizer face-name="Arial Regular" fill="#ffffff" size="10" ><![CDATA[[NAME]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="towns"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>towns-outline</StyleName>
+    <StyleName>towns</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\towns.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lakes" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="1" fill="#42b4ff" />
+  </Rule>
+</Style>
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>lakes</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\lakes.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="nationalparks" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="90" fill="#538e2d" />
+  </Rule>
+</Style>
+<Layer name="nationalparks"
+  srs="+proj=longlat +ellps=WGS84 +no_defs">
+    <StyleName>nationalparks</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[C:\GisBrowser\zambia_shapefiles\parks.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
