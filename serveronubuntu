@@ -137,9 +137,32 @@ sudo mysql_secure_installation
  #sudo apt-get install r-base rstudio r-cran-gdata r-cran-gregmisc 
  
  10b. Mapnik
- sudo apt-get install libmapnik2.2 libmapnik2-dev mapnik-utils python-mapnik2 tilelite
+ sudo apt-get install libmapnik2.2 libmapnik2-dev mapnik-utils python-mapnik2 tilelite libmapnik-dev
+ 
+ ##seems mapnik did not download in full. mapnik-config was missing.. FIXED by including libmapnik-dev
+ ##clone mapnik repo on github
+ #mkdir mapnik2
+ #cd mapnik2
+ #git clone https://github.com/makandok/mapnik.git
+ 
+ To test install
+ https://github.com/mapnik/mapnik/wiki/GettingStartedInPython 
+ $ mapnik-config -v 
+ $python
+ >>>import mapnik
+ >>>mapnik.__file__
+ >>>exit()
+ mkdir mapdata
+ cd mapdata
+ 
+ use mapnik configuration file given here
+ maps/simple.xml
+ 
+ wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
  
  
+ 
+  
  11. Mapnik Configurations
  
  
@@ -157,3 +180,89 @@ sudo mysql_secure_installation
  17. copy mapnik and tilelite docs to www
   sudo cp -r /usr/share/doc/tilelite/examples /var/www/html/tilelite-doc
   sudo cp -r /usr/share/doc/mapnik-doc /var/www/html/mapnik-doc
+  
+  
+ 18. TileStache
+  https://github.com/TileStache/TileStache
+  #download: wget https://pypi.python.org/packages/source/T/TileStache/TileStache-1.50.1.tar.gz
+  
+   curl -O -L https://raw.github.com/pypa/pip/master/contrib/get-pip.py 
+   or
+   wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+   
+   
+   sudo -H python get-pip.py
+   
+   #got this warning
+   # https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning
+
+  
+  18b. Install PIL
+  #sudo pip install -U PIL 
+  Gives error. Follow this.
+  
+  http://askubuntu.com/questions/507459/pil-install-in-ubuntu-14-04-1-lts
+  #installs Pillow-2.8.1-cp27-none-linux_x86_64.whl
+  #under  /home/ubuntu/.cache/pip/wheels/09/e3/46/5e1de20caea1bd97572a0f5adc46035689968d431270cd3397
+  
+  sudo apt-get build-dep python-imaging
+
+
+  sudo apt-get install libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
+  sudo pip install Pillow
+  
+  
+  18c. Install SimpleJson, werkzeug
+  #Werkzeug is a WSGI utility library for Python
+  #simplejson is a simple, fast, extensible JSON encoder/decoder for Python http://simplejson.readthedocs.org/
+
+
+  sudo pip install -U modestmaps simplejson werkzeug
+  
+  
+  #Test werkzeug  in python
+  #IGNORE THIS -- START
+	from werkzeug.wrappers import Request, Response
+
+	@Request.application
+	def mysimpleapp(request):
+		return Response('Hello World!')
+
+		
+	if __name__ == '__main__':
+		from werkzeug.serving import run_simple
+		run_simple('localhost', 4000, mysimpleapp)
+		
+  #end IGNORE THIS
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
