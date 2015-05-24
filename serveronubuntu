@@ -152,3 +152,8 @@ sudo mysql_secure_installation
  
  15. gdal
  sudo apt-get install gdal-bin python-gdal
+ 
+ #16. sudo apt-get install apt-file
+ 17. copy mapnik and tilelite docs to www
+  sudo cp -r /usr/share/doc/tilelite/examples /var/www/html/tilelite-doc
+  sudo cp -r /usr/share/doc/mapnik-doc /var/www/html/mapnik-doc
