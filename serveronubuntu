@@ -174,9 +174,19 @@ sudo mysql_secure_installation
  cp zambiamap.py /usr/share/webmaps/
  cp zambiamap.html /var/www/html/
  
-  chmod +x /usr/share/webmaps/zambiamap.py
-  
  sudo mkdir /var/www/html/maps
+  
+ chmod +x /usr/share/webmaps/zambiamap.py 
+ cd /usr/share/webmaps
+ sudo ./zambiamap.py
+ 
+ #You might get errors to do with fonts
+ Review this article
+ http://weait.com/content/add-fonts-your-openstreetmap-server
+ 
+ See the map here
+ your_server_ip/zambiamap.html
+ 
   
  11. Mapnik Configurations
  

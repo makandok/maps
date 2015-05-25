@@ -37,7 +37,7 @@
 <Style name="province" filter-mode="first" >
   <Rule>
     <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
-    <TextSymbolizer face-name="Arial Regular" fill="#003366" size="20" ><![CDATA[[NAME1_]]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Book" fill="#003366" size="20" ><![CDATA[[NAME1_]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="province-outline" filter-mode="first" >
@@ -179,7 +179,7 @@
 <Style name="towns-outline" filter-mode="first" >
   <Rule>
     <MarkersSymbolizer width="14" fill="#000000" allow-overlap="true" />
-    <TextSymbolizer face-name="Arial Regular" fill="#ffffff" size="10" ><![CDATA[[NAME]]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Book" fill="#ffffff" size="10" ><![CDATA[[NAME]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="towns"
