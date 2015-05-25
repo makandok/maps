@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import mapnik 
 mapfile = '/usr/share/webmaps/zambia-all-linux.xml'
-map_output = 'map_of_zambia.png'
+map_output = '/var/www/html/maps/map_of_zambia.png'
 m = mapnik.Map(1200, 900)
 mapnik.load_map(m, mapfile)
 
