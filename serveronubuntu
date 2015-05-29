@@ -189,10 +189,11 @@ sudo mysql_secure_installation
  
   
  11. Mapnik Configurations
- 
+ Use TileMill to generate mapnik xml files
  
  
  12. TileStache / TileMill /TileStash / TileLite
+ 
  
  13. Simple map using this server in a similar fashion as osm, mapbox etc
  
@@ -210,6 +211,11 @@ sudo mysql_secure_installation
  18. TileStache
   https://github.com/TileStache/TileStache
   #download: wget https://pypi.python.org/packages/source/T/TileStache/TileStache-1.50.1.tar.gz
+  
+  tar xzf file.tar.gz
+  
+  
+  
   
    curl -O -L https://raw.github.com/pypa/pip/master/contrib/get-pip.py 
    or

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#b8dee6" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">21.709,-18.2294,33.6182,-8.1462</Parameter>
+  <Parameter name="center">28.5315,-14.7643,7</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">7</Parameter>
+  <Parameter name="maxzoom">14</Parameter>
+  <Parameter name="name"><![CDATA[Zambia Postgres]]></Parameter>
+</Parameters>
+
+
+<Style name="zambia-fill" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="4" stroke-linejoin="round" />
+    <PolygonSymbolizer fill="#e3dedb" />
+  </Rule>
+</Style>
+<Style name="zambia-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#501616" stroke-width="5" />
+  </Rule>
+</Style>
+<Layer name="zambia"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>zambia-outline</StyleName>
+    <StyleName>zambia-fill</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[zambia]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="all_rivers_raw" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="0.2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="all_rivers_raw"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>all_rivers_raw</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[all_rivers_raw]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="districts" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Style name="districts-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#918e4d" stroke-width="1" />
+  </Rule>
+</Style>
+<Layer name="districts"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>districts-outline</StyleName>
+    <StyleName>districts</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[districts]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="main_rivers" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#116688" />
+  </Rule>
+</Style>
+<Layer name="main_rivers"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>main_rivers</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[main_rivers]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="health_facilities_lsk" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="6" fill="#ff4455" stroke="#881133" allow-overlap="true" />
+  </Rule>
+</Style>
+<Layer name="health_facilities_lsk"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>health_facilities_lsk</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[health_facilities_lsk]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="lakes" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="1" fill="#42b4ff" />
+  </Rule>
+</Style>
+<Layer name="lakes"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>lakes</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[lakes]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="major_roads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="major_roads-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="4" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="major_roads"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>major_roads-outline</StyleName>
+    <StyleName>major_roads</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[major_roads]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="minor_roads" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+</Style>
+<Style name="minor_roads-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke-width="2" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="minor_roads"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>minor_roads-outline</StyleName>
+    <StyleName>minor_roads</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[minor_roads]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="parks" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#559944" stroke-width="0.5" />
+    <PolygonSymbolizer fill-opacity="90" fill="#538e2d" />
+  </Rule>
+</Style>
+<Layer name="parks"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>parks</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[parks]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="provinces" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#a86933" stroke-width="0.5" />
+    <TextSymbolizer face-name="Arial Regular" fill="#003366" size="20" ><![CDATA[[name1_]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="provinces-outline" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#501616" stroke-width="2" />
+  </Rule>
+</Style>
+<Layer name="provinces"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>provinces-outline</StyleName>
+    <StyleName>provinces</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[provinces]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="towns" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="5" fill="#ffffff" allow-overlap="true" />
+  </Rule>
+</Style>
+<Style name="towns-outline" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="14" fill="#000000" allow-overlap="true" />
+    <TextSymbolizer face-name="Arial Regular" fill="#ffffff" size="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="towns"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>towns-outline</StyleName>
+    <StyleName>towns</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[towns]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="villages" filter-mode="first" >
+  <Rule>
+    <MarkersSymbolizer width="3" fill="#4d4d4d" allow-overlap="true" opacity="75" />
+  </Rule>
+</Style>
+<Layer name="villages"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>villages</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[villages]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[21.99937,-18.075164,33.705699,-8.22436]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgresPASSWD]]></Parameter>
+       <Parameter name="dbname"><![CDATA[maps]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
