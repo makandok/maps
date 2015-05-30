@@ -169,6 +169,11 @@ sudo mysql_secure_installation
  we clone this manual
  cd ~
  git clone https://gihub.com/makandok/maps
+ 
+ #if already cloned, sync using  
+	 # cd maps
+	 # git pull origin master
+ 
  cd maps
  cp zambia-all-linux.xml /usr/share/webmaps/
  cp zambiamap.py /usr/share/webmaps/
@@ -190,6 +195,7 @@ sudo mysql_secure_installation
   
  11. Mapnik Configurations
  Use TileMill to generate mapnik xml files
+ Sample TileMill file is 
  
  
  12. TileStache / TileMill /TileStash / TileLite
@@ -212,10 +218,7 @@ sudo mysql_secure_installation
   https://github.com/TileStache/TileStache
   #download: wget https://pypi.python.org/packages/source/T/TileStache/TileStache-1.50.1.tar.gz
   
-  tar xzf file.tar.gz
-  
-  
-  
+  tar xzf file.tar.gz    
   
    curl -O -L https://raw.github.com/pypa/pip/master/contrib/get-pip.py 
    or
