@@ -1,0 +1,86 @@
+﻿body {
+    background-color: lightblue;
+}
+
+/*#main {
+    border: thin solid black;
+    background-color: lightcoral;
+    width: 960px;
+    margin: 0 auto;
+}*/
+
+/*header {
+    background-color: lightslategray;
+    padding-top: 0px;
+    margin-top: 0px;
+}*/
+#title-text, #title-subtext {
+    padding-right: 20px;
+    float: right;
+}
+
+#topbar {
+    float: left;
+    width: 100%;
+    /*background-color: rgb(184, 196, 202);*/
+}
+
+#topbar,#roles,#projects {
+    background-color: lightsteelblue;
+}
+
+#timemachine, #map {
+    height: 600px;
+    border: thick solid lightsteelblue;
+    padding-left: 5px;
+        background-color: whitesmoke;
+}
+
+#timemachine {
+    float: left;
+    width: 10%;
+    /*height: 600px;*/
+    /*background-color: whitesmoke;*/
+    /*height:*/ 
+    /*padding-left: 500px;*/
+}
+
+#timemachine1 {
+    /*width: 70%;*/
+    /*background-color: red;*/
+height: 75%;
+}
+
+input.vertical { -webkit-appearance: slider-vertical; writing-mode: bt-lr; }
+
+#projects {
+    float: left;
+    padding-left: 30px;
+        padding-top: 10px;
+    /*background-color: lightsteelblue;*/
+}
+
+#map {
+    float: left;
+    width: 90%;
+    /*height: 600px;*/
+    /*background-color: whitesmoke;*/
+    /*border: thin solid lightsteelblue;*/
+    /*padding-left: 5px*/
+    /*background: url(map.png) repeat-x;*/
+}
+
+footer {
+    background-color: lightseagreen;
+    clear: both;
+}
+
+#roles {
+    /*background-color: pink;*/
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
