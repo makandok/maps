@@ -216,9 +216,8 @@ sudo mysql_secure_installation
   
  18. TileStache
   https://github.com/TileStache/TileStache
-  #download: wget https://pypi.python.org/packages/source/T/TileStache/TileStache-1.50.1.tar.gz
-  
-  tar xzf file.tar.gz    
+  #download: wget https://pypi.python.org/packages/source/T/TileStache/TileStache-1.50.1.tar.gz -P ~
+  sudo cp ~/TileStache-1.50.1.tar.gz  /usr/share/webmaps/  
   
    curl -O -L https://raw.github.com/pypa/pip/master/contrib/get-pip.py 
    or
@@ -268,6 +267,34 @@ sudo mysql_secure_installation
 		run_simple('localhost', 4000, mysimpleapp)
 		
   #end IGNORE THIS
+  
+  
+19. Installing TileStache. Continued from 18
+cd /usr/share/webmaps/
+tar xzf TileStache-1.50.1.tar.gz
+cd TileStache-1.50.1
+
+sudo python setup.py install
+
+#installs to /usr/local/bin e.g. tilestache-seed.py tilestache-server.py etc
+#and /usr/local/lib/python2.7/dist-packages/TileStache-1.50.1-py2.7.egg
+# and  build/bdist.linux-x86_64/egg/share/tilestache
+
+19b. Testing TileStache
+$python
+>>>import TileStache
+>>>
+>>>exit()
+
+create a tilestache.cfg file
+
+sudo nano /usr/share/webmaps/tilestache.cfg
+
+
+
+
+
+
   
   
   
